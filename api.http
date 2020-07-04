@@ -1,0 +1,44 @@
+### 分页查询用户信息
+GET http://localhost:3000/api/v1/users?page=3&pageSize=10 HTTP/1.1
+
+### 根据用户编号查询用户信息
+GET http://localhost:3000/api/v1/users/18 HTTP/1.1
+
+### 根据用户名查询用户信息
+GET http://localhost:3000/api/v1/users?username=xiaoming HTTP/1.1
+
+### 添加用户信息
+POST http://localhost:3000/api/v1/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "xiaoming",
+  "password": "testabc123!!!",
+  "nickname": "小明",
+  "avatar": "@img(32x32,@color,xiaoming)",
+  "birthday": "2000-01-01",
+  "sex": 1,
+  "email": "xiaoming@qq.com",
+  "phone": "13199332834",
+  "address": "四川成都"
+}
+
+### 修改用户信息
+PUT http://localhost:3000/api/v1/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 18,
+  "username": "xiaoming",
+  "nickname": "小明1号",
+  "avatar": "@img(64x64,@color,no1)",
+  "birthday": "2000-08-22",
+  "sex": 1,
+  "email": "xiaomingerhao@qq.com",
+  "phone": "13199332834",
+  "address": "四川成都"
+}
+
+### 删除用户信息
+DELETE http://localhost:3000/api/v1/users/12 HTTP/1.1
+
